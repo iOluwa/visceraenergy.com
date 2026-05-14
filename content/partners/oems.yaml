@@ -1,0 +1,272 @@
+# ============================================================
+# Viscera Energy — OEM Partners Data
+# File: /content/partners/oems.yaml
+#
+# HOW TO UPDATE:
+# - To add a new OEM: copy one entry block, paste at the end,
+#   fill in the fields. Save. Site rebuilds in 30 seconds.
+# - To update an agreement: find the OEM by name, edit fields.
+# - Categories: valves | compressors | pumps | pipes |
+#               hvac | power | instrumentation | steel
+# ============================================================
+
+partners:
+
+  # ── VALVES ─────────────────────────────────────────────────
+
+  - name: BVT Sweden
+    flag: "🇸🇪"
+    country: Sweden
+    category: valves
+    tagline: Valve Solutions
+    agreement: Distribution agreement
+    products: Industrial valves and valve solutions
+    website: https://www.bvtvalves.com
+
+  - name: FEVISA
+    flag: "🇪🇸"
+    country: Spain
+    category: valves
+    tagline: Industrial Valves
+    agreement: Sole authorization — West Africa
+    products: Gate, globe, check, ball and control valves
+    website: https://www.fevisa.es
+
+  - name: HP Valves
+    flag: ""
+    country: International
+    category: valves
+    tagline: High Performance Valves
+    agreement: Agency agreement
+    products: High-performance industrial valves for critical service
+    website: ""
+
+  - name: KVT
+    flag: ""
+    country: International
+    category: valves
+    tagline: Valve Technology
+    agreement: Distribution agreement
+    products: Engineered valve technology solutions
+    website: ""
+
+  - name: UNTES
+    flag: "🇪🇸"
+    country: Spain
+    category: valves
+    tagline: Engineered Butterfly Valves
+    agreement: Distribution agreement
+    products: Butterfly valves, engineered valve solutions
+    website: https://www.untes.com
+
+  - name: Jordith
+    flag: "🇪🇸"
+    country: Spain
+    category: valves
+    tagline: Mariposa Butterfly Valves
+    agreement: Distribution agreement
+    products: Butterfly valves for industrial applications
+    website: ""
+
+  - name: HAWLE
+    flag: "🇦🇹"
+    country: Austria
+    category: valves
+    tagline: Water and Gas Infrastructure Valves
+    agreement: Regional distribution
+    products: Gate valves, butterfly valves, fittings for water and gas networks
+    website: https://www.hawle.at
+
+  - name: ZETKAMA
+    flag: "🇵🇱"
+    country: Poland
+    category: valves
+    tagline: Industrial Valves and Fittings
+    agreement: West Africa distribution
+    products: Cast iron and steel valves, fittings, pressure equipment
+    website: https://www.zetkama.com.pl
+
+  - name: HERZ
+    flag: "🇦🇹"
+    country: Austria
+    category: hvac
+    tagline: HVAC Balancing Valves
+    agreement: Authorised distributor
+    products: Balancing valves, thermostatic heads, HVAC components
+    website: https://www.herz.eu
+
+  # ── COMPRESSORS ────────────────────────────────────────────
+
+  - name: Burckhardt Compression
+    flag: "🇨🇭"
+    country: Switzerland
+    category: compressors
+    tagline: Reciprocating Compressors
+    agreement: Agency / representative agreement
+    products: Reciprocating compressors, labyrinth piston compressors, piston rings
+    website: https://www.burckhardtcompression.com
+
+  - name: UNTES (Compressor Division)
+    flag: "🇪🇸"
+    country: Spain
+    category: compressors
+    tagline: Compressed Air Systems
+    agreement: Distribution agreement
+    products: Compressed air and gas compressor systems
+    website: ""
+
+  # ── PUMPS ───────────────────────────────────────────────────
+
+  - name: Coffin Turbo Pumps
+    flag: "🇺🇸"
+    country: USA
+    category: pumps
+    tagline: Turbine and Process Pumps
+    agreement: Distribution — West Africa
+    products: Turbine pumps, process pumps, marine and industrial pumps
+    website: ""
+
+  - name: Xi'An Pump and Valve Plant
+    flag: "🇨🇳"
+    country: China
+    category: pumps
+    tagline: Industrial Pumps and Valves
+    agreement: Distribution agreement
+    products: Centrifugal pumps, gate valves, globe valves, industrial valves
+    website: ""
+
+  - name: Flowserve
+    flag: "🇺🇸"
+    country: USA
+    category: pumps
+    tagline: Flow Control Products
+    agreement: Authorised distributor
+    products: Pumps, valves, seals and services for industrial flow control
+    website: https://www.flowserve.com
+
+  # ── PIPES AND STEEL ─────────────────────────────────────────
+
+  - name: Kardemir Steel
+    flag: "🇹🇷"
+    country: Turkey
+    category: steel
+    tagline: Steel Worldwide
+    agreement: Distribution agreement
+    products: Structural steel, sections, beams, rails, billets
+    website: https://www.kardemir.com
+
+  - name: Mahavir Steel Industries
+    flag: "🇮🇳"
+    country: India
+    category: steel
+    tagline: Steel and Pipe Products
+    agreement: Distribution agreement
+    products: Steel pipes, structural steel, MS sections, bars
+    website: ""
+
+  - name: USI (Universal Steel Industries)
+    flag: "🇨🇳"
+    country: China
+    category: pipes
+    tagline: Line Pipe and Fittings
+    agreement: Distribution agreement
+    products: API 5L line pipe, OCTG casing and tubing, pipe fittings
+    website: ""
+
+  - name: SMC (Shanghai Metal Corporation)
+    flag: "🇨🇳"
+    country: China
+    category: steel
+    tagline: Metal and Building Materials
+    agreement: Distribution / supply agreement
+    products: Structural steel, pipes, aluminium, copper and metal products
+    website: https://www.shanghaimetal.com
+
+  # ── POWER ───────────────────────────────────────────────────
+
+  - name: AKSA Power Generation
+    flag: "🇹🇷"
+    country: Turkey
+    category: power
+    tagline: Diesel and Gas Generators
+    agreement: Authorised dealer
+    products: Diesel generating sets (7.5kVA – 3,000kVA), gas generators, marine gensets
+    website: https://www.aksapower.com
+
+  - name: Moov Solar
+    flag: "🇦🇹"
+    country: Austria
+    category: power
+    tagline: Solar Energy Systems
+    agreement: Distribution agreement
+    products: Solar panels, inverters, mounting systems, solar energy solutions
+    website: ""
+
+  # ── HVAC ────────────────────────────────────────────────────
+
+  - name: AVK
+    flag: "🇩🇰"
+    country: Denmark
+    category: hvac
+    tagline: Gate Valves and Hydrants
+    agreement: Distribution agreement
+    products: Gate valves, butterfly valves, ball valves, hydrants, couplings
+    website: https://www.avkvalves.com
+
+  # ── INSTRUMENTATION ─────────────────────────────────────────
+
+  - name: Tormene SpA
+    flag: "🇮🇹"
+    country: Italy
+    category: instrumentation
+    tagline: Custody Transfer Metering
+    agreement: Agency agreement — West Africa
+    products: Custody transfer metering systems (CTMS), flow computers, metering skids
+    website: https://www.tormene.it
+
+  - name: Petrotex
+    flag: "🇩🇪"
+    country: Germany
+    category: instrumentation
+    tagline: Industrial Textiles and Filtration
+    agreement: Distribution agreement
+    products: Industrial filtration, high-pressure hoses, expansion joints
+    website: ""
+
+  - name: Airtrust
+    flag: "🇩🇪"
+    country: Germany
+    category: instrumentation
+    tagline: Air and Gas Technology
+    agreement: Distribution agreement
+    products: Compressed air and gas handling systems, filtration, dryers
+    website: ""
+
+  - name: Skay Auto
+    flag: "🇮🇳"
+    country: India
+    category: instrumentation
+    tagline: Industrial Automation
+    agreement: Distribution agreement
+    products: Pneumatic and hydraulic actuators, automation components
+    website: ""
+
+  - name: Vamein
+    flag: "🇪🇸"
+    country: Spain
+    category: valves
+    tagline: Valve Engineering
+    agreement: Distribution agreement
+    products: Industrial valves, valve engineering and manufacturing
+    website: ""
+
+  # ── Arc Engineering (project-specific partner) ───────────────
+
+  - name: Arc Engineering USA
+    flag: "🇺🇸"
+    country: USA
+    category: instrumentation
+    tagline: Metering Systems Integration
+    agreement: Project-specific collaboration
+    products: Gas metering systems integration, CTMS project support
+    website: ""

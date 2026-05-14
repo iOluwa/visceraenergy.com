@@ -1,0 +1,67 @@
+backend:
+  name: github
+  repo: visceraenergy/visceraenergy.com   # UPDATE: replace with your actual GitHub username/repo
+  branch: main
+  site_domain: visceraenergy.com
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+# ── COLLECTIONS ────────────────────────────────────────────────
+collections:
+
+  # Insights / Blog articles
+  - name: "insights"
+    label: "Insights"
+    label_singular: "Article"
+    folder: "content/insights"
+    create: true
+    slug: "{{year}}-{{month}}-{{slug}}"
+    fields:
+      - { label: "Title",         name: "title",       widget: "string" }
+      - { label: "Publish Date",  name: "date",        widget: "datetime" }
+      - { label: "Author",        name: "author",      widget: "string",  default: "Modupe Famurewa, FNSE" }
+      - { label: "Excerpt",       name: "excerpt",     widget: "text" }
+      - { label: "Featured Image",name: "image",       widget: "image",   required: false }
+      - { label: "Category",      name: "category",    widget: "select",
+          options: ["Upstream O&G", "Midstream", "Power", "HVAC", "Procurement", "Asset Integrity", "Trade Finance"] }
+      - { label: "Reading Time (min)", name: "reading_time", widget: "number", default: 5 }
+      - { label: "Body",          name: "body",        widget: "markdown" }
+
+  # Projects (executed)
+  - name: "projects"
+    label: "Executed Projects"
+    label_singular: "Project"
+    folder: "content/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Client",        name: "client",      widget: "string" }
+      - { label: "Country",       name: "country",     widget: "string" }
+      - { label: "Year",          name: "year",        widget: "string" }
+      - { label: "Sector",        name: "sector",      widget: "select",
+          options: ["upstream", "midstream", "power", "hvac", "industrial", "water"] }
+      - { label: "Scope",         name: "scope",       widget: "text" }
+      - { label: "OEM Partners",  name: "oem_partners",widget: "list" }
+      - { label: "Outcome",       name: "outcome",     widget: "text" }
+      - { label: "Status",        name: "status",      widget: "select",
+          options: ["executed", "active", "proposal"], default: "executed" }
+
+  # OEM Partners
+  - name: "partners"
+    label: "OEM Partners"
+    label_singular: "OEM Partner"
+    folder: "content/partners"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name",          name: "name",        widget: "string" }
+      - { label: "Country",       name: "country",     widget: "string" }
+      - { label: "Flag Emoji",    name: "flag",        widget: "string", required: false }
+      - { label: "Category",      name: "category",    widget: "select",
+          options: ["valves", "compressors", "pumps", "pipes", "hvac", "power", "instrumentation", "steel"] }
+      - { label: "Tagline",       name: "tagline",     widget: "string" }
+      - { label: "Agreement Type",name: "agreement",   widget: "string" }
+      - { label: "Products",      name: "products",    widget: "text" }
+      - { label: "Website",       name: "website",     widget: "string", required: false }
+      - { label: "Logo",          name: "logo",        widget: "image",  required: false }

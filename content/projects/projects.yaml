@@ -1,0 +1,153 @@
+# ============================================================
+# Viscera Energy — Projects Data
+# File: /content/projects/projects.yaml
+#
+# status options: executed | active | proposal
+# ============================================================
+
+executed:
+
+  - id: topek-2021
+    client: TOPEK Engineering and Consultancy Services Ltd
+    country: Nigeria
+    year: 2021
+    sector: upstream
+    scope: >
+      Supply of gate valves, globe valves and line pipes for upstream
+      facility maintenance operations.
+    oem_partners:
+      - HP Valves
+      - KVT
+      - Line Pipe Suppliers
+    outcome: >
+      Full OEM documentation package delivered. Equipment passed factory
+      acceptance test (FAT) and was commissioned on schedule with zero
+      non-conformance reports.
+    evidence: Available on request
+
+  - id: tema-pipeline-2022
+    client: Tema Pipeline Project (via NetcoDietsmann)
+    country: Ghana
+    year: 2022
+    sector: midstream
+    scope: >
+      Supply of pipeline valves and associated fittings for transmission
+      pipeline rehabilitation project.
+    oem_partners:
+      - BVT Sweden
+      - FEVISA Spain
+    outcome: >
+      Valves supplied with full traceability documentation, material test
+      certificates and third-party inspection reports. Client noted
+      certification completeness as above expectation for the region.
+    evidence: Available on request
+
+  - id: lpe3-power-2023
+    client: LPE3 Power Project
+    country: Nigeria
+    year: 2023
+    sector: power
+    scope: >
+      Supply of 1.5MW diesel generator set and associated electrical
+      integration support services.
+    oem_partners:
+      - AKSA Power Generation (Turkey)
+    outcome: >
+      Generator commissioned and fully operational within agreed timeline.
+      After-sales technical support maintained by Viscera post-commissioning.
+    evidence: Available on request
+
+  - id: idc-ghana-2022
+    client: IDC Ghana — Industrial Development Corporation
+    country: Ghana
+    year: 2022
+    sector: industrial
+    scope: >
+      Supply of industrial valves and instrumentation for process facility
+      upgrade.
+    oem_partners:
+      - HP Valves
+      - HERZ Austria
+    outcome: >
+      OEM-authorised supply with full material test certificates and
+      pressure test certificates. Zero non-conformance reports on
+      delivery inspection.
+    evidence: Available on request
+
+  - id: ngic-ctms-2023
+    client: NGIC — Nigeria Gas Infrastructure Corporation
+    country: Nigeria
+    year: "2023–2024"
+    sector: midstream
+    scope: >
+      Advanced procurement for Custody Transfer Metering System (CTMS)
+      package — complete metering skid specification and procurement.
+    oem_partners:
+      - Tormene SpA (Italy)
+      - Arc Engineering (USA)
+    outcome: >
+      Technical specification finalised and approved. Purchase order under
+      execution. OEM factory audit at Tormene SpA completed successfully.
+    status_note: Purchase order under execution — advanced procurement stage
+    evidence: Available on request
+
+  - id: herz-hvac-portfolio
+    client: Multiple commercial and residential developments
+    country: Nigeria
+    year: "2019–present"
+    sector: hvac
+    scope: >
+      Ongoing supply of HERZ HVAC balancing valves, thermostatic heads
+      and building services components to commercial and residential
+      developments.
+    oem_partners:
+      - HERZ Austria
+    outcome: >
+      Continuous supply relationship established. Products specified into
+      multiple building services contracts across Lagos.
+    evidence: Available on request
+
+
+active_engagements:
+  # These are bids submitted and proposals under evaluation.
+  # They demonstrate pipeline depth — not delivered work.
+
+  - client: SEPLAT Energy
+    scope: Upstream valve and instrumentation supply
+    sector: upstream
+    status: Bid submitted — under evaluation
+
+  - client: Shell Nigeria (via Pristine Engineering)
+    scope: Pipeline fittings and valve package
+    sector: upstream
+    status: Proposal under evaluation
+
+  - client: KwaleGenco Power Project
+    scope: Generator and ancillary equipment supply
+    sector: power
+    status: Technical proposal submitted
+
+  - client: Duport Midstream
+    scope: CTMS metering package procurement support
+    sector: midstream
+    status: Active commercial discussions
+
+  - client: NetcoDietsmann (frame contract)
+    scope: Annual valve and equipment supply frame agreement
+    sector: upstream
+    status: Negotiations in progress
+
+  - client: BESL
+    scope: Valve maintenance and supply contract
+    sector: upstream
+    status: Bid under evaluation
+
+  - client: SATCO
+    scope: Engineering support and equipment supply
+    sector: upstream
+    status: Active discussions
+
+  - client: EWS Grupo — Angola
+    scope: Industrial valve and pipe supply
+    sector: industrial
+    status: Proposal submitted
