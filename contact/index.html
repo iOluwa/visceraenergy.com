@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Viscera Energy</title>
+  <meta name="description" content="Contact Viscera Energy. Submit an RFQ, request a vendor qualification package, or reach us at our Lagos or Texas offices. We respond to qualified enquiries within one business day.">
+  <meta name="keywords" content="Viscera Energy contact, RFQ Nigeria energy, Lagos office Ikoyi, sales@visceraenergy.com, energy equipment enquiry">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact — Viscera Energy">
+  <meta property="og:description" content="Submit an RFQ or reach Viscera Energy. Lagos and Texas offices. We respond within one business day.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://visceraenergy.com/contact/">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact — Viscera Energy">
+  <meta name="twitter:description" content="Submit an RFQ or reach Viscera Energy. Lagos and Texas offices. We respond within one business day.">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Viscera Energy",
+    "url": "https://visceraenergy.com/contact/",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Viscera Energy Operations and Maintenance Limited",
+      "telephone": "+234-803-409-6723",
+      "email": "sales@visceraenergy.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2nd Floor, Right Wing, 186 Awolowo Road",
+        "addressLocality": "Ikoyi, Lagos",
+        "addressCountry": "NG"
+      }
+    }
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Design System -->
+  <link rel="stylesheet" href="/css/design-system.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════════════════ -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo" aria-label="Viscera Energy Home">
+        <div class="nav__logo-box"><span class="nav__logo-text">VE</span></div>
+        <span class="nav__brand-sub">Viscera Energy</span>
+      </a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="/about/" class="nav__link">About</a></li>
+        <li><a href="/#services" class="nav__link">Services</a></li>
+        <li><a href="/partners/" class="nav__link">OEM Partners</a></li>
+        <li><a href="/projects/" class="nav__link">Projects</a></li>
+        <li><a href="/credentials/" class="nav__link">Credentials</a></li>
+        <li><a href="/insights/" class="nav__link">Insights</a></li>
+        <li><a href="/contact/" class="nav__link active">Contact</a></li>
+        <li><a href="/contact/" class="nav__cta">Request a Quote</a></li>
+      </ul>
+      <button class="nav__hamburger" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       PAGE HERO
+  ═══════════════════════════════════════════════════════ -->
+  <section class="page-hero" aria-labelledby="page-hero-heading">
+    <div class="container">
+      <div class="page-hero__inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span class="breadcrumb__sep" aria-hidden="true">›</span>
+          <span aria-current="page">Contact</span>
+        </nav>
+        <p class="section-label">Get in Touch</p>
+        <h1 class="display-lg" id="page-hero-heading" style="margin-top:var(--sp-3);margin-bottom:var(--sp-5);">Contact Viscera Energy</h1>
+        <p style="font-size:1.05rem;line-height:1.7;color:rgba(255,255,255,0.68);max-width:620px;">
+          Submit an RFQ, request a vendor qualification package, or reach us directly. We respond to qualified enquiries within one business day.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       CONTACT GRID
+  ═══════════════════════════════════════════════════════ -->
+  <section class="section section--dark" aria-labelledby="contact-form-heading">
+    <div class="container">
+      <div class="contact__grid">
+
+        <!-- LEFT: RFQ FORM -->
+        <div>
+          <h2 class="display-md" id="contact-form-heading" style="color:var(--white);margin-bottom:var(--sp-2);">Send an Enquiry</h2>
+          <p style="font-size:0.9rem;line-height:1.65;color:rgba(255,255,255,0.55);margin-bottom:var(--sp-8);">Complete the form below and we will respond within one business day.</p>
+
+          <form
+            class="contact-form"
+            id="rfq-form"
+            data-webhook=""
+            novalidate
+            aria-label="RFQ enquiry form"
+          >
+            <div class="form-row">
+              <div class="form-group">
+                <label for="full-name">Full Name *</label>
+                <input type="text" id="full-name" name="fullName" required placeholder="Your full name" autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label for="company">Company *</label>
+                <input type="text" id="company" name="company" required placeholder="Your company" autocomplete="organization">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="country">Country *</label>
+                <input type="text" id="country" name="country" required placeholder="Country" autocomplete="country-name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required placeholder="your@email.com" autocomplete="email">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="+234 ..." autocomplete="tel">
+              </div>
+              <div class="form-group">
+                <label for="service-type">Service Type *</label>
+                <select id="service-type" name="serviceType" required>
+                  <option value="" disabled selected>Select a service</option>
+                  <option value="procurement-supply">Procurement and Supply</option>
+                  <option value="engineering-integration">Engineering and Integration</option>
+                  <option value="operations-maintenance">Operations and Maintenance</option>
+                  <option value="oem-partnership">OEM Partnership</option>
+                  <option value="general-enquiry">General Enquiry</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message">Message / Brief *</label>
+              <textarea id="message" name="message" required placeholder="Describe your requirement, project scope, or question..."></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary">Send Enquiry</button>
+            <p id="form-status" style="margin-top:var(--sp-3);font-size:0.82rem;color:rgba(255,255,255,0.55);display:none;" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <!-- RIGHT: CONTACT INFORMATION -->
+        <div class="contact__info">
+
+          <div>
+            <div class="contact-item__label">Lagos Office</div>
+            <div class="contact-item__value">
+              2nd Floor, Right Wing<br>
+              186 Awolowo Road, Ikoyi<br>
+              Lagos, Nigeria
+            </div>
+          </div>
+
+          <div>
+            <div class="contact-item__label">Phone</div>
+            <div class="contact-item__value">
+              <a href="tel:+2348034096723">+234 803 409 6723</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="contact-item__label">Email</div>
+            <div class="contact-item__value">
+              <a href="mailto:sales@visceraenergy.com">sales@visceraenergy.com</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="contact-item__label">Texas Affiliate</div>
+            <div class="contact-item__value">
+              Viscera Energy O&amp;M LLC<br>
+              Texas, USA<br>
+              <a href="tel:+19452740144">+1 (945) 274-0144</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="contact-item__label">Quick Contact</div>
+            <a href="https://wa.me/2348034096723" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat with Viscera Energy on WhatsApp">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Chat on WhatsApp
+            </a>
+            <p style="margin-top:var(--sp-4);font-size:0.78rem;line-height:1.6;color:rgba(255,255,255,0.4);">
+              We respond to qualified enquiries within one business day.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       LOCATION REFERENCE
+  ═══════════════════════════════════════════════════════ -->
+  <section class="section section--mid" style="padding-top:var(--sp-12);padding-bottom:var(--sp-12);" aria-labelledby="location-heading">
+    <div class="container">
+      <div style="max-width:640px;" class="reveal">
+        <p class="section-label" style="margin-bottom:var(--sp-3);">Our Location</p>
+        <h2 style="font-family:var(--font-display);font-weight:700;font-size:1.4rem;text-transform:uppercase;letter-spacing:0.04em;color:var(--white);margin-bottom:var(--sp-4);" id="location-heading">186 Awolowo Road, Ikoyi, Lagos</h2>
+        <p style="font-size:0.95rem;line-height:1.7;color:rgba(255,255,255,0.6);">
+          Directly opposite the Lagos State Secretariat on Awolowo Road. 2nd Floor, Right Wing.
+        </p>
+        <div style="margin-top:var(--sp-6);display:flex;gap:var(--sp-4);flex-wrap:wrap;">
+          <div style="background:var(--navy-light);border:1px solid var(--navy-border-2);border-radius:var(--radius-md);padding:var(--sp-5) var(--sp-6);">
+            <div style="font-size:0.65rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--orange);margin-bottom:var(--sp-2);">Nigeria HQ</div>
+            <div style="font-size:0.85rem;line-height:1.6;color:rgba(255,255,255,0.7);">
+              2nd Floor, Right Wing<br>
+              186 Awolowo Road, Ikoyi<br>
+              Lagos, Nigeria
+            </div>
+          </div>
+          <div style="background:var(--navy-light);border:1px solid var(--navy-border-2);border-radius:var(--radius-md);padding:var(--sp-5) var(--sp-6);">
+            <div style="font-size:0.65rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--orange);margin-bottom:var(--sp-2);">USA Affiliate</div>
+            <div style="font-size:0.85rem;line-height:1.6;color:rgba(255,255,255,0.7);">
+              Viscera Energy O&amp;M LLC<br>
+              Texas, USA<br>
+              <a href="tel:+19452740144" style="color:rgba(255,255,255,0.55);transition:color 150ms;">+1 (945) 274-0144</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand-name">Viscera Energy</div>
+          <p class="footer__brand-tag">Direct OEM authority across twelve countries. Engineered to operate, maintain, and outlast.</p>
+          <p class="footer__creds">Viscera Energy Operations and Maintenance Limited · RC 1393891 · NUPRC OGISP · D&amp;B DUNS · SAP Ariba</p>
+        </div>
+        <div>
+          <div class="footer__col-title">Navigation</div>
+          <ul class="footer__links">
+            <li><a href="/about/" class="footer__link">About</a></li>
+            <li><a href="/services/" class="footer__link">Services</a></li>
+            <li><a href="/partners/" class="footer__link">OEM Partners</a></li>
+            <li><a href="/projects/" class="footer__link">Projects</a></li>
+            <li><a href="/credentials/" class="footer__link">Credentials</a></li>
+            <li><a href="/insights/" class="footer__link">Insights</a></li>
+            <li><a href="/contact/" class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Services</div>
+          <ul class="footer__links">
+            <li><a href="/services/source/" class="footer__link">Procurement &amp; Supply</a></li>
+            <li><a href="/services/deploy/" class="footer__link">Engineering &amp; Integration</a></li>
+            <li><a href="/services/operate/" class="footer__link">Operations &amp; Maintenance</a></li>
+            <li><a href="/leadership/" class="footer__link">Leadership</a></li>
+            <li><a href="/global/" class="footer__link">Global Presence</a></li>
+            <li><a href="/careers/" class="footer__link">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Contact</div>
+          <div class="footer__address">
+            <strong>Lagos, Nigeria</strong>
+            2nd Floor, Right Wing<br>
+            186 Awolowo Road, Ikoyi<br>
+            Lagos, Nigeria<br>
+            <a href="tel:+2348034096723" style="color:rgba(255,255,255,0.55);">+234 803 409 6723</a><br>
+            <a href="mailto:sales@visceraenergy.com" style="color:rgba(255,255,255,0.55);">sales@visceraenergy.com</a>
+          </div>
+          <a href="https://www.linkedin.com/company/viscera-energy" class="footer__linkedin" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            Follow on LinkedIn
+          </a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 Viscera Energy O&amp;M Ltd. All rights reserved.</p>
+        <p class="footer__legal">Viscera Energy Operations and Maintenance Limited is incorporated in Nigeria (RC 1393891). Viscera Energy O&amp;M LLC is registered in Texas, USA.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       JAVASCRIPT
+  ═══════════════════════════════════════════════════════ -->
+  <script>
+    const toggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => { navLinks.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); });
+    });
+    const reveals = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);} });
+    }, {threshold:0.1});
+    reveals.forEach(el => obs.observe(el));
+
+    // RFQ form submission — webhook with mailto fallback
+    const form = document.getElementById('rfq-form');
+    const status = document.getElementById('form-status');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const webhook = form.dataset.webhook;
+      const data = Object.fromEntries(new FormData(form));
+
+      if (webhook) {
+        try {
+          status.style.display = 'block';
+          status.textContent = 'Sending...';
+          const res = await fetch(webhook, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          });
+          if (res.ok) {
+            status.textContent = 'Enquiry sent. We will respond within one business day.';
+            form.reset();
+          } else {
+            throw new Error('Server error');
+          }
+        } catch {
+          window.location.href = 'mailto:sales@visceraenergy.com?subject=Enquiry from ' + encodeURIComponent(data.company || 'Website');
+        }
+      } else {
+        const body = Object.entries(data).map(([k,v]) => k + ': ' + v).join('%0A');
+        window.location.href = 'mailto:sales@visceraenergy.com?subject=Enquiry — ' + encodeURIComponent(data.serviceType || 'General') + '&body=' + body;
+      }
+    });
+  </script>
+
+</body>
+</html>

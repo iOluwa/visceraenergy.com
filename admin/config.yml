@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: visceraenergy/visceraenergy.com   # UPDATE: replace with your actual GitHub username/repo
+  repo: iOluwa/visceraenergy.com
   branch: main
   site_domain: visceraenergy.com
 
