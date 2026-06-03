@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://visceraenergy.com/partners/">
   <title>Authorized OEM Network — Viscera Energy</title>
   <meta name="description" content="Direct OEM agreements across thirty manufacturers in twelve countries. Valves, compressors, pumps, power, HVAC and instrumentation — direct distribution, agency or sole authorisation. No competitor in Africa holds what follows.">
   <meta name="keywords" content="OEM valve suppliers Nigeria, authorized distributor Africa, energy equipment procurement, BVT valves, Burckhardt compression, AKSA generators Nigeria, Flowserve Africa">
@@ -113,13 +114,13 @@
       </div>
 
       <div class="partners-filter reveal" role="group" aria-label="Filter partners by category">
-        <button class="filter-btn active" data-cat="all">All</button>
-        <button class="filter-btn" data-cat="valves">Valves</button>
-        <button class="filter-btn" data-cat="compressors">Compressors</button>
-        <button class="filter-btn" data-cat="pumps">Pumps</button>
-        <button class="filter-btn" data-cat="power">Power</button>
-        <button class="filter-btn" data-cat="hvac-instrumentation">HVAC / Instrumentation</button>
-        <button class="filter-btn" data-cat="pipes-steel">Pipes / Steel</button>
+        <button class="filter-btn active" data-cat="all" aria-pressed="true">All</button>
+        <button class="filter-btn" data-cat="valves" aria-pressed="false">Valves</button>
+        <button class="filter-btn" data-cat="compressors" aria-pressed="false">Compressors</button>
+        <button class="filter-btn" data-cat="pumps" aria-pressed="false">Pumps</button>
+        <button class="filter-btn" data-cat="power" aria-pressed="false">Power</button>
+        <button class="filter-btn" data-cat="hvac-instrumentation" aria-pressed="false">HVAC / Instrumentation</button>
+        <button class="filter-btn" data-cat="pipes-steel" aria-pressed="false">Pipes / Steel</button>
       </div>
 
       <!-- ═══ PARTNERS GRID ═══ -->
@@ -464,8 +465,8 @@
             2nd Floor, Right Wing<br>
             186 Awolowo Road, Ikoyi<br>
             Lagos, Nigeria<br>
-            <a href="tel:+2348034096723" style="color:rgba(255,255,255,0.55);">+234 803 409 6723</a><br>
-            <a href="mailto:sales@visceraenergy.com" style="color:rgba(255,255,255,0.55);">sales@visceraenergy.com</a>
+            <a href="tel:+2348034096723" class="link--muted">+234 803 409 6723</a><br>
+            <a href="mailto:sales@visceraenergy.com" class="link--muted">sales@visceraenergy.com</a>
           </div>
           <a href="https://www.linkedin.com/company/viscera-energy" class="footer__linkedin" target="_blank" rel="noopener noreferrer">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -487,47 +488,8 @@
   <!-- ═══════════════════════════════════════════════════════
        JAVASCRIPT
   ═══════════════════════════════════════════════════════ -->
-  <script>
-    // Mobile nav toggle
-    const toggle = document.getElementById('nav-toggle');
-    const navLinks = document.getElementById('nav-links');
-    toggle.addEventListener('click', () => {
-      const open = navLinks.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', open);
-    });
 
-    // Close mobile nav on link click
-    navLinks.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-
-    // Reveal on scroll
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-    reveals.forEach(el => observer.observe(el));
-
-    // Partner filter
-    document.querySelectorAll('.filter-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const cat = btn.dataset.cat;
-        document.querySelectorAll('.partner-card').forEach(card => {
-          card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
-        });
-      });
-    });
-  </script>
-
+  <script src="/js/main.js" defer></script>
+  <script src="/js/partners.js" defer></script>
 </body>
 </html>

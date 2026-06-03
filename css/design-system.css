@@ -1521,6 +1521,8 @@ em { font-style: normal; }
 }
 
 .creds-table tr:hover td { background: rgba(255,255,255,0.02); }
+.creds-table td strong { color: var(--white); }
+.creds-table td.redacted { color: rgba(255,255,255,0.35); }
 
 .cred-badge {
   display: inline-flex;
@@ -1871,3 +1873,38 @@ em { font-style: normal; }
 }
 
 .animate-fade-in { animation: fade-in 0.6s ease forwards; }
+
+
+/* ── 25. UTILITY CLASSES ────────────────────────────────────── */
+
+/* Muted links — footer contact links on dark backgrounds */
+.link--muted { color: rgba(255,255,255,0.55); }
+.link--muted:hover { color: var(--white); }
+.link--orange { color: var(--orange); }
+.link--orange:hover { color: var(--orange-lt); }
+
+/* Label with orange accent colour */
+.label--orange { color: var(--orange); }
+
+/* Small caption beneath primary content */
+.text--caption { color: var(--text-light); font-size: 0.72rem; }
+
+/* Dimmed body text on dark section backgrounds */
+.body-dim { color: rgba(255,255,255,0.6); }
+.body-dim--light { color: rgba(255,255,255,0.7); }
+
+/* Faint / redacted text */
+.text--faint { color: rgba(255,255,255,0.35); }
+
+/* Form feedback message — toggled visible by JS */
+.form-feedback {
+  margin-top: var(--sp-3);
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.55);
+  display: none;
+}
+.form-feedback--success { display: block; color: #2ab96f; }
+.form-feedback--error   { display: block; color: var(--orange); }
+
+/* White text override for table labels */
+.text-white { color: var(--white); }

@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://visceraenergy.com/careers/">
   <title>Careers — Viscera Energy</title>
   <meta name="description" content="Viscera Energy recruits experienced energy engineers, procurement specialists, and business development professionals. Based in Ikoyi, Lagos, with a Texas affiliate. Field assignments across West and Central Africa.">
   <meta name="keywords" content="Viscera Energy careers, energy engineer Nigeria, Lagos jobs, oil and gas procurement, West Africa engineering jobs">
@@ -199,8 +200,8 @@
           Send your CV and a brief note on what you could bring to:
         </p>
         <p class="about__body" style="margin-top:1rem; padding:1.5rem; background:rgba(255,255,255,0.04); border-left:3px solid var(--orange); border-radius:0 var(--radius) var(--radius) 0;">
-          <strong style="color:var(--white);">Email:</strong> <a href="mailto:sales@visceraenergy.com" style="color:var(--orange);">sales@visceraenergy.com</a><br>
-          <strong style="color:var(--white);">Subject line:</strong> <span style="color:rgba(255,255,255,0.7);">Application — [Your Discipline]</span><br>
+          <strong class="text-white">Email:</strong> <a href="mailto:sales@visceraenergy.com" class="link--orange">sales@visceraenergy.com</a><br>
+          <strong class="text-white">Subject line:</strong> <span class="body-dim--light">Application — [Your Discipline]</span><br>
           <span style="font-size:0.85rem; color:rgba(255,255,255,0.5); display:block; margin-top:0.5rem;">e.g. Application — Pipeline Engineer or Application — Procurement Specialist</span>
         </p>
         <p class="about__body" style="margin-top:1.5rem;">
@@ -288,8 +289,8 @@
           <div class="footer__address">
             <strong>Lagos, Nigeria</strong>
             186 Awolowo Road, Ikoyi<br>
-            <a href="tel:+2348034096723" style="color:rgba(255,255,255,0.55);">+234 803 409 6723</a><br>
-            <a href="mailto:sales@visceraenergy.com" style="color:rgba(255,255,255,0.55);">sales@visceraenergy.com</a>
+            <a href="tel:+2348034096723" class="link--muted">+234 803 409 6723</a><br>
+            <a href="mailto:sales@visceraenergy.com" class="link--muted">sales@visceraenergy.com</a>
           </div>
           <a href="https://www.linkedin.com/company/viscera-energy" class="footer__linkedin" target="_blank" rel="noopener noreferrer">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
@@ -305,15 +306,6 @@
   </footer>
 
 
-  <script>
-    const t=document.getElementById('nav-toggle'),n=document.getElementById('nav-links');
-    t.addEventListener('click',()=>{const o=n.classList.toggle('open');t.setAttribute('aria-expanded',o);});
-    n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{n.classList.remove('open');t.setAttribute('aria-expanded','false');}));
-
-    const reveals=document.querySelectorAll('.reveal');
-    const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
-    reveals.forEach(el=>observer.observe(el));
-  </script>
-
+  <script src="/js/main.js" defer></script>
 </body>
 </html>

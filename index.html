@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://visceraenergy.com/">
   <title>Viscera Energy — Global Energy Infrastructure Partner</title>
   <meta name="description" content="Direct OEM authority across twelve countries. Authorized equipment supply, engineering integration, and operations support for the energy sector across West Africa.">
   <meta name="keywords" content="OEM valve supply Nigeria, energy infrastructure Africa, NUPRC service provider, procurement supply West Africa, operations maintenance Nigeria">
@@ -531,7 +532,7 @@
   <section class="section section--light" id="clients" aria-labelledby="clients-heading">
     <div class="container">
       <div class="section-hdr reveal">
-        <p class="section-hdr__label" style="color:var(--orange);">Clients</p>
+        <p class="section-hdr__label">Clients</p>
         <h2 class="section-hdr__title section-hdr__title--dark" id="clients-heading">Trusted by Operators and EPCs Across the Region</h2>
       </div>
 
@@ -547,7 +548,7 @@
         <div class="client-card"><div class="client-card__dot"></div><div class="client-card__name">IDC Ghana</div></div>
         <div class="client-card"><div class="client-card__dot"></div><div class="client-card__name">NGIC</div></div>
         <div class="client-card"><div class="client-card__dot"></div><div class="client-card__name">Elektrint</div></div>
-        <div class="client-card"><div class="client-card__dot"></div><div class="client-card__name">SEPLAT Energy <span style="color:var(--text-light);font-size:0.72rem;">(active bid)</span></div></div>
+        <div class="client-card"><div class="client-card__dot"></div><div class="client-card__name">SEPLAT Energy <span class="text--caption">(active bid)</span></div></div>
       </div>
 
       <p class="clients__note reveal">Client references and project documentation available to qualified counterparties under NDA.</p>
@@ -617,7 +618,7 @@
             <textarea id="message" name="message" required placeholder="Describe your requirement, project scope, or question..."></textarea>
           </div>
           <button type="submit" class="btn btn--primary">Send Enquiry</button>
-          <p id="form-status" style="margin-top:var(--sp-3);font-size:0.82rem;color:rgba(255,255,255,0.55);display:none;"></p>
+          <p id="form-feedback" class="form-feedback"></p>
         </form>
 
         <!-- Contact Info -->
@@ -715,8 +716,8 @@
             2nd Floor, Right Wing<br>
             186 Awolowo Road, Ikoyi<br>
             Lagos, Nigeria<br>
-            <a href="tel:+2348034096723" style="color:rgba(255,255,255,0.55);">+234 803 409 6723</a><br>
-            <a href="mailto:sales@visceraenergy.com" style="color:rgba(255,255,255,0.55);">sales@visceraenergy.com</a>
+            <a href="tel:+2348034096723" class="link--muted">+234 803 409 6723</a><br>
+            <a href="mailto:sales@visceraenergy.com" class="link--muted">sales@visceraenergy.com</a>
           </div>
           <a href="https://www.linkedin.com/company/viscera-energy" class="footer__linkedin" target="_blank" rel="noopener noreferrer">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -738,80 +739,6 @@
   <!-- ═══════════════════════════════════════════════════════
        JAVASCRIPT
   ═══════════════════════════════════════════════════════ -->
-  <script>
-    // Mobile nav toggle
-    const toggle = document.getElementById('nav-toggle');
-    const navLinks = document.getElementById('nav-links');
-    toggle.addEventListener('click', () => {
-      const open = navLinks.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', open);
-    });
-
-    // Close mobile nav on link click
-    navLinks.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-
-    // Reveal on scroll
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-    reveals.forEach(el => observer.observe(el));
-
-    // Active nav link on scroll
-    const sections = document.querySelectorAll('section[id]');
-    const navLinkEls = document.querySelectorAll('.nav__link[href^="#"]');
-    window.addEventListener('scroll', () => {
-      let current = '';
-      sections.forEach(s => {
-        if (window.scrollY >= s.offsetTop - 80) current = s.id;
-      });
-      navLinkEls.forEach(a => {
-        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-      });
-    });
-
-    // RFQ form submission
-    const form = document.getElementById('rfq-form');
-    const status = document.getElementById('form-status');
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const webhook = form.dataset.webhook;
-      const data = Object.fromEntries(new FormData(form));
-
-      if (webhook) {
-        try {
-          status.style.display = 'block';
-          status.textContent = 'Sending...';
-          const res = await fetch(webhook, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-          });
-          if (res.ok) {
-            status.textContent = 'Enquiry sent. We will respond within one business day.';
-            form.reset();
-          } else {
-            throw new Error('Server error');
-          }
-        } catch {
-          window.location.href = 'mailto:sales@visceraenergy.com?subject=Enquiry from ' + encodeURIComponent(data.company || 'Website');
-        }
-      } else {
-        const body = Object.entries(data).map(([k,v]) => k + ': ' + v).join('%0A');
-        window.location.href = 'mailto:sales@visceraenergy.com?subject=Enquiry — ' + encodeURIComponent(data.serviceType || 'General') + '&body=' + body;
-      }
-    });
-  </script>
-
+  <script src="/js/main.js" defer></script>
 </body>
 </html>
