@@ -34,6 +34,8 @@
 
 /* ── 1. CSS CUSTOM PROPERTIES (LOCKED TOKENS) ─────────────── */
 :root {
+  --nav-h:      80px;
+
   --navy:       #0a1628;
   --navy-mid:   #0f2044;
   --navy-light: #162d5a;
@@ -191,7 +193,7 @@ em { font-style: normal; }
   z-index: 1000;
   background: var(--navy);
   border-bottom: 2px solid var(--orange);
-  height: 64px;
+  height: var(--nav-h);
   display: flex;
   align-items: center;
 }
@@ -214,33 +216,14 @@ em { font-style: normal; }
   flex-shrink: 0;
 }
 
-.nav__logo-box {
-  background: var(--white);
-  border-radius: var(--radius-sm);
-  padding: 4px 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.nav__logo-img {
+  height: 60px;
+  width: auto;
+  display: block;
 }
 
-.nav__logo-text {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.15rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--navy);
-  line-height: 1;
-}
-
-.nav__brand-sub {
-  font-family: var(--font-body);
-  font-size: 0.6rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.55);
-  white-space: nowrap;
+@media (max-width: 900px) {
+  .nav__logo-img { height: 48px; }
 }
 
 .nav__links {
@@ -317,7 +300,7 @@ em { font-style: normal; }
   .nav__links {
     display: none;
     position: absolute;
-    top: 64px; left: 0; right: 0;
+    top: var(--nav-h); left: 0; right: 0;
     background: var(--navy-mid);
     flex-direction: column;
     align-items: stretch;
@@ -328,7 +311,6 @@ em { font-style: normal; }
   .nav__links.open { display: flex; }
   .nav__link { padding: var(--sp-3) var(--sp-4); }
   .nav__cta { display: none; }
-  .nav__brand-sub { display: none; }
 }
 
 
@@ -391,7 +373,7 @@ em { font-style: normal; }
   justify-content: center;
   position: relative;
   overflow: hidden;
-  padding-top: 64px;
+  padding-top: var(--nav-h);
 }
 
 .hero__bg {
@@ -1347,6 +1329,13 @@ em { font-style: normal; }
   grid-template-columns: 2fr 1fr 1fr 1.5fr;
   gap: var(--sp-10);
   margin-bottom: var(--sp-12);
+}
+
+.footer__logo-img {
+  height: 72px;
+  width: auto;
+  display: block;
+  margin-bottom: var(--sp-4);
 }
 
 .footer__brand-name {
