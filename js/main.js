@@ -86,58 +86,90 @@
   }
 
   /* ── RFQ FORM SUBMISSION ────────────────────────────────── */
+  // data-webhook set   → POST the enquiry as JSON; confirm only on a 2xx reply.
+  // data-webhook empty → open the visitor's email app with the enquiry
+  //                      pre-filled, and say plainly it has not been sent.
   const rfqForm = document.getElementById('rfq-form');
   if (rfqForm) {
+    const SALES_EMAIL = 'sales@visceraenergy.com';
+    const feedback    = document.getElementById('form-feedback');
+
+    const showFeedback = (text, type) => {
+      if (!feedback) return;
+      feedback.textContent = text;
+      feedback.className   = `form-feedback form-feedback--${type}`;
+    };
+
+    // "Label: value" lines in form order, using visible labels and option text.
+    const enquiryLines = () =>
+      [...rfqForm.elements]
+        .filter(el => el.name && el.value.trim())
+        .map(el => {
+          const label = rfqForm.querySelector(`label[for="${el.id}"]`);
+          const name  = label ? label.textContent.replace('*', '').trim() : el.name;
+          const value = el.tagName === 'SELECT' ? el.selectedOptions[0].text : el.value.trim();
+          return `${name}: ${value}`;
+        });
+
+    // Clear a field's error state as soon as it becomes valid.
+    rfqForm.addEventListener('input', (e) => {
+      if (e.target.hasAttribute('aria-invalid') && e.target.checkValidity()) {
+        e.target.removeAttribute('aria-invalid');
+      }
+    });
+
     rfqForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      const btn      = rfqForm.querySelector('[type="submit"]');
-      const feedback = document.getElementById('form-feedback');
-      const origText = btn.textContent;
+      // The form is novalidate, so required and email checks happen here.
+      const invalid = [...rfqForm.elements].filter(el => el.willValidate && !el.validity.valid);
+      if (invalid.length) {
+        invalid.forEach(el => el.setAttribute('aria-invalid', 'true'));
+        rfqForm.reportValidity();
+        showFeedback('Please complete the highlighted fields.', 'error');
+        return;
+      }
 
+      const webhookUrl = rfqForm.dataset.webhook || '';
+
+      if (!webhookUrl) {
+        // Kept synchronous so the mail app opens inside the submit click,
+        // which some browsers require before handing off to another app.
+        const service = rfqForm.elements.serviceType.selectedOptions[0].text;
+        const subject = `RFQ from ${rfqForm.elements.company.value.trim()} — ${service}`;
+        const body    = enquiryLines().join('\r\n');
+        window.location.href =
+          `mailto:${SALES_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        // The form is not reset, so nothing is lost if no mail app opens.
+        showFeedback(
+          'Your email app should now open with this enquiry ready to send — it has not been sent yet. ' +
+          `If nothing opened, email ${SALES_EMAIL} directly.`,
+          'info'
+        );
+        return;
+      }
+
+      const btn      = rfqForm.querySelector('[type="submit"]');
+      const origText = btn.textContent;
       btn.textContent = 'Sending…';
       btn.disabled    = true;
 
-      const data = Object.fromEntries(new FormData(rfqForm));
-
       try {
-        // Primary: n8n webhook (replace URL with your actual n8n webhook)
-        const webhookUrl = rfqForm.dataset.webhook || '';
+        const res = await fetch(webhookUrl, {
+          method:  'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body:    JSON.stringify(Object.fromEntries(new FormData(rfqForm))),
+        });
+        if (!res.ok) throw new Error(`Webhook responded ${res.status}`);
 
-        if (webhookUrl) {
-          const res = await fetch(webhookUrl, {
-            method:  'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body:    JSON.stringify(data),
-          });
-
-          if (!res.ok) throw new Error('Webhook error');
-        } else {
-          // Fallback: mailto
-          const subject = encodeURIComponent(
-            `RFQ from ${data.company || data.name} — ${data.service_type || 'General Enquiry'}`
-          );
-          const body = encodeURIComponent(
-            Object.entries(data).map(([k, v]) => `${k}: ${v}`).join('\n')
-          );
-          window.location.href = `mailto:sales@visceraenergy.com?subject=${subject}&body=${body}`;
-        }
-
-        // Success state
         rfqForm.reset();
-        if (feedback) {
-          feedback.textContent =
-            'Thank you — your enquiry has been received. We will respond within one business day.';
-          feedback.className = 'form-feedback form-feedback--success';
-        }
-
+        showFeedback(
+          'Thank you — your enquiry has been received. We will respond within one business day.',
+          'success'
+        );
       } catch (err) {
         console.error('Form error:', err);
-        if (feedback) {
-          feedback.textContent =
-            'Something went wrong. Please email us directly at sales@visceraenergy.com';
-          feedback.className = 'form-feedback form-feedback--error';
-        }
+        showFeedback(`Something went wrong. Please email us directly at ${SALES_EMAIL}`, 'error');
       } finally {
         btn.textContent = origText;
         btn.disabled    = false;

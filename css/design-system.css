@@ -1239,6 +1239,12 @@ em { font-style: normal; }
   border-color: var(--orange);
 }
 
+/* Set by main.js when a submit attempt finds the field invalid */
+.form-group [aria-invalid="true"] {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 1px var(--orange);
+}
+
 .form-group input::placeholder,
 .form-group textarea::placeholder {
   color: rgba(255,255,255,0.3);
@@ -1482,6 +1488,48 @@ em { font-style: normal; }
 .breadcrumb a { color: rgba(255,255,255,0.4); transition: color var(--t-fast); }
 .breadcrumb a:hover { color: var(--orange); }
 .breadcrumb__sep { color: rgba(255,255,255,0.2); }
+
+/* List-form breadcrumb (About, Partners): lay the items out in a row */
+.breadcrumb__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-2);
+  list-style: none;
+}
+
+/* Optional radial + grid background layer (About, Partners) */
+.page-hero__bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Keep hero content above the background layers */
+.page-hero > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hero heading and intro: same scale as the .display-lg heroes */
+.page-hero__heading {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: var(--sp-5);
+}
+
+.page-hero__sub {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.68);
+  max-width: 680px;
+}
 
 
 /* ── 19. CREDENTIALS TABLE ─────────────────────────────────── */
@@ -1894,6 +1942,13 @@ em { font-style: normal; }
 }
 .form-feedback--success { display: block; color: #2ab96f; }
 .form-feedback--error   { display: block; color: var(--orange); }
+.form-feedback--info    { display: block; color: rgba(255,255,255,0.8); }
 
 /* White text override for table labels */
 .text-white { color: var(--white); }
+
+/* Four-across card grid on wide screens only; below 900px the
+   component's own responsive columns apply (Global page) */
+@media (min-width: 901px) {
+  .grid--4up { grid-template-columns: repeat(4, 1fr); }
+}

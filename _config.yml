@@ -1,0 +1,11 @@
+# GitHub Pages (Jekyll) build settings.
+#
+# Everything in the repo is published to visceraenergy.com unless it is
+# listed below. These files stay in the repo but are not served.
+# admin/config.yml is deliberately NOT excluded: Decap CMS loads it from
+# the live site.
+exclude:
+  - README.md
+  - BUILD_BIBLE.md
+  - content/      # CMS data files; not read by any page
+  - tools/        # local build scripts

@@ -84,7 +84,7 @@ Replace `visceraenergy/visceraenergy.com` with your actual GitHub `username/repo
 │   ├── index.html          ← Decap CMS interface
 │   └── config.yml          ← CMS configuration
 ├── robots.txt
-└── BUILD_BIBLE.md
+└── _config.yml             ← Pages build: files kept off the live site
 ```
 
 ---
@@ -119,24 +119,23 @@ Edit `_includes/footer.html` — find the phone/email, change it.
 
 ## n8n RFQ Webhook
 
-In `js/main.js`, find:
-```javascript
-const webhookUrl = rfqForm.dataset.webhook || '';
-```
-
-In `contact/index.html`, add to the form tag:
+Both enquiry forms (`index.html` and `contact/index.html`) read their endpoint
+from the form tag. Set the same URL in both:
 ```html
 <form id="rfq-form" data-webhook="https://YOUR_N8N_INSTANCE/webhook/rfq">
 ```
 
-Replace with your actual n8n webhook URL from the n8n workflow you build in Week 4.
+With a URL set, `js/main.js` POSTs the enquiry as JSON and confirms receipt only
+when the webhook responds OK. With it empty, the visitor's email app opens with
+the enquiry pre-filled, and the page says it has not been sent yet.
 
 ---
 
 ## Build Bible
 
-See `BUILD_BIBLE.md` for the full project specification, decisions record,
-and 6-week build sequence.
+The build bible (specification, decisions record, build sequence) is an
+internal document and is not kept in this public repo. `.gitignore` blocks
+`BUILD_BIBLE.md` from being committed, and `_config.yml` keeps it off the site.
 
 ---
 

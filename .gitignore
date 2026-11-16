@@ -1,0 +1,6 @@
+# Internal planning documents: kept out of this public repo.
+BUILD_BIBLE.md
+BUILD_BIBLE-*.md
+
+# macOS
+.DS_Store
